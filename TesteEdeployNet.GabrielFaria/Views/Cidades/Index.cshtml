@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form id="formBuscar" method="post">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                @Html.Label("Cidade")
+                @Html.TextBox("Cidade")
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                @Html.Label("Estado")
+                @Html.TextBox("Estado")
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="btnCreate" class="btn btn-success" onclick="pesquisarCidade()">
+        Buscar
+    </button>
+
+</form>
+
+<div id="divListaCidades" class="row">
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/cidade")
+}
+
